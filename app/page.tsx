@@ -12,17 +12,17 @@ export default function Home() {
     const ctx = canvas.getContext("2d");
 
     const TOTAL = 20;
-    const petalArray = [];
+    const petalArray: Petal[] = [];
 
     const petalImg = new window.Image();
     petalImg.src = "https://djjjk9bjm164h.cloudfront.net/petal.png";
 
-    let mouseX = 0;
-    function touchHandler(e) {
-      mouseX = (e.clientX || e.touches[0].clientX) / window.innerWidth;
-    }
-    window.addEventListener("mousemove", touchHandler);
-    window.addEventListener("touchmove", touchHandler);
+    // let mouseX = 0;
+    // function touchHandler(e) {
+    //   mouseX = (e.clientX || e.touches[0].clientX) / window.innerWidth;
+    // }
+    // window.addEventListener("mousemove", touchHandler);
+    // window.addEventListener("touchmove", touchHandler);
 
     window.addEventListener("resize", () => {
       canvas.width = window.innerWidth;
@@ -61,6 +61,7 @@ export default function Home() {
         if (this.y > canvas.height || this.x > canvas.width) {
           this.reset();
         }
+        if (!ctx) return;
         ctx.globalAlpha = this.opacity;
         ctx.drawImage(
           petalImg,
@@ -90,6 +91,7 @@ export default function Home() {
 
     function render() {
       if (!canvas) return;
+      if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       petalArray.forEach((petal) => petal.animate());
       requestAnimationFrame(render);

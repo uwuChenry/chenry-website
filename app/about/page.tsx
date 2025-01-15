@@ -1,19 +1,11 @@
 "use client"
 import Navbar from "@/components/nav";
 import React, { useState , useEffect, useRef } from "react";
-import { usePathname } from 'next/navigation';
 
-const hoverStyle = {
-  textDecoration: "underline",
-  textUnderlineOffset: "0.4em",
-  textDecorationThickness: 1.5,
-  textDecorationColor: "#248232"
-}
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
-
     const canvas = canvasRef.current;
     if (!canvas) return;
     canvas.width = window.innerWidth;
@@ -27,13 +19,17 @@ export default function Home() {
     petalImg.src = "https://djjjk9bjm164h.cloudfront.net/petal.png";
 
     let mouseX = 0;
+    let mouseY = 0;
     function touchHandler(e: MouseEvent | TouchEvent) {
       if (e instanceof MouseEvent) {
-      mouseX = e.clientX / window.innerWidth;
+        mouseY = e.clientY / window.innerHeight;
+        mouseX = e.clientX / window.innerWidth;
       } else if (e instanceof TouchEvent) {
-      mouseX = e.touches[0].clientX / window.innerWidth;
+        mouseY = e.touches[0].clientY / window.innerHeight;
+        mouseX = e.touches[0].clientX / window.innerWidth;
       }
     }
+
     window.addEventListener("mousemove", touchHandler);
     window.addEventListener("touchmove", touchHandler);
 
@@ -86,8 +82,8 @@ export default function Home() {
       }
 
       animate() {
-        this.x += this.xSpeed + mouseX * 4/3;
-        this.y += this.ySpeed + mouseX * 3/3;
+        this.x += this.xSpeed + mouseX * 5;
+        this.y += this.ySpeed + mouseY * 3;
         // this.x += this.xSpeed;
         // this.y += this.ySpeed;
         this.flip += this.flipSpeed;
@@ -121,7 +117,7 @@ export default function Home() {
         <div className="min-h-screen">
           <div className="flex flex-row justify-between">
             <div>
-              <p className="text-mygreen text-xl font-semibold">Henry Chen</p>
+              <p className="text-mygreen text-2xl font-semibold">Henry Chen</p>
             </div>
             <Navbar />
           </div>

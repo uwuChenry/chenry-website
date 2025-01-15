@@ -120,6 +120,7 @@ export default function Home() {
             <Navbar />
           </div>
           <div className="flex flex-col">
+
             <div>
               <p>ruaaaExperience</p>
             </div>

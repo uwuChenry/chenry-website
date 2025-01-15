@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${radio.className} antialiased flex justify-center min-h-screen pl-0 pr-0 pt-12 pb-2 mx-10 sm:mx-24`}
+        className={`${radio.className} antialiased flex justify-center min-h-screen pl-0 pr-0 pt-12 pb-12 mx-10 sm:mx-24`}
       >
         {children}
       </body>

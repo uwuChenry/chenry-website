@@ -127,10 +127,10 @@ export default function Home() {
             </div>
             <p className="text-mygreen-light">[ He/him ]</p>
             <div className="">
-              <p className="pt-5">I'm Henry and I'm a Taiwanese Kiwi studying at Georgia Tech majoring in Computer Engineering. </p>
+              <p className="pt-5">I&apos;m Henry and I&apos;m a Taiwanese Kiwi studying at Georgia Tech majoring in Computer Engineering. </p>
               <p className="pt-5">For eight years, I have participated in robotics competitions and gained extensive experience in designing robots and developing robotics algorithms for time-critical systems. In addition, I have honed my skills in leadership, teamwork, project management, event organization and mentoring. </p>
               <p className="pt-5">Providing educational opportunities for robotics in New Zealand has been a mission for me due to the lack of resources when I was starting out. I founded Skywalker Robotics in 2019 to create a place for passionate students that wanted to improve their skills in robotics through a variety of different robotic competitions such as FLL, VRC and Vex IQ. Outside of Skywalker Robotics              </p>
-              <p className="pt-5">Throughout the years, I've found my passion for robotics and I hope to continue pursuing my passion for my career in fields such as planning, controls, computer vision as well as low level programming and embedded systems.              </p>
+              <p className="pt-5">Throughout the years, I&apos;ve found my passion for robotics and I hope to continue pursuing my passion for my career in fields such as planning, controls, computer vision as well as low level programming and embedded systems.              </p>
               <p className="pt-5">Feel free to contact me <a href="mailto:pchen432@gatech.edu" className="underline hover:text-mygreen">here</a>. I look forward to meeting passionate like-minded peers and professionals.</p>
             </div>
             <div>

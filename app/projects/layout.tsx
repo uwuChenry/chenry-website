@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { Radio_Canada, Noto_Sans } from "next/font/google";
+import { Radio_Canada } from "next/font/google";
 
 const radio = Radio_Canada({
   subsets: ["latin"],

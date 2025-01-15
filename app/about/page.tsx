@@ -111,7 +111,7 @@ export default function Home() {
     <div className="max-w-2xl w-full">
       <canvas
         ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-screen -z-10"
+        className="fixed top-0 left-0 w-full h-full -z-10"
       />
       <div className="w-full">
         <div className="min-h-screen">

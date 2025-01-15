@@ -1,6 +1,7 @@
 "use client"
 import Navbar from "@/components/nav";
 import React, { useState , useEffect, useRef } from "react";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -136,11 +137,11 @@ export default function Home() {
             <div>
               <ul className="pt-10 flex flex-row" > 
                 <a href="https://github.com/uwuChenry" className="pr-5" onMouseEnter={() => setHovered("github")} onMouseLeave={() => setHovered(undefined)}>
-                  <img src="/github.svg" alt="github" width={30} height={30} style={{ filter: hovered === "github" ? 'none' : 'grayscale(100%) brightness(0) invert(0.5)' }}/>
+                  <Image src="/github.svg" alt="github" width={30} height={30} style={{ filter: hovered === "github" ? 'none' : 'grayscale(100%) brightness(0) invert(0.5)' }}/>
                 </a>
 
                 <a href="https://www.linkedin.com/in/henry-chen-980s/"className="pr-5" onMouseEnter={() => setHovered("linkedin")} onMouseLeave={() => setHovered(undefined)}>
-                  <img src="/linkedin.svg" alt="linkedin" width={30} height={30} style={{ filter: hovered === "linkedin" ? 'none' : 'grayscale(100%) brightness(0) invert(0.5)' }}/>
+                  <Image src="/linkedin.svg" alt="linkedin" width={30} height={30} style={{ filter: hovered === "linkedin" ? 'none' : 'grayscale(100%) brightness(0) invert(0.5)' }}/>
                 </a>
               </ul>
             </div>

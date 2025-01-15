@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 const hoverStyle = {
     textDecoration: "underline",
@@ -39,7 +41,7 @@ function Navbar() {
                 style={hovered === "resume" ? hoverStyle : undefined}>
                 <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     <p className="text-right pr-1">Resume</p>
-                    <img src="/resume.svg" alt="Download resume" className="w-5 h-5" style={{ filter: hovered === "resume" ? 'none' : 'grayscale(100%) brightness(0) invert(0.7)' }} />
+                    <Image src="/resume.svg" alt="Download resume" className="w-5 h-5" style={{ filter: hovered === "resume" ? 'none' : 'grayscale(100%) brightness(0) invert(0.7)' }} />
                 </Link>
             </li>
         </ul>

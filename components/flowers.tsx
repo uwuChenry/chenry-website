@@ -14,10 +14,11 @@ export function flower(){
         const petalArray: Petal[] = [];
     
         const petalImg = new window.Image();
-        petalImg.src = "https://djjjk9bjm164h.cloudfront.net/petal.png";
+        // petalImg.src = "https://djjjk9bjm164h.cloudfront.net/petal.png";
+        petalImg.src = "/petal.png";
     
-        let mouseX = 0;
-        let mouseY = 0;
+        let mouseX = 0.6;
+        let mouseY = 0.2;
         function touchHandler(e: MouseEvent | TouchEvent) {
           if (e instanceof MouseEvent) {
             mouseY = e.clientY / window.innerHeight;
@@ -27,7 +28,7 @@ export function flower(){
             mouseX = e.touches[0].clientX / window.innerWidth;
           }
         }
-    
+
         window.addEventListener("mousemove", touchHandler);
         window.addEventListener("touchmove", touchHandler);
     

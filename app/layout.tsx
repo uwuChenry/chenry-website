@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Radio_Canada } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 
 const radio = Radio_Canada({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${radio.className} antialiased flex justify-center min-h-screen pl-0 pr-0 pt-12 pb-12 mx-10 sm:mx-24`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

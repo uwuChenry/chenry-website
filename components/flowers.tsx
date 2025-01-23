@@ -83,8 +83,6 @@ export function flower(){
           animate() {
             this.x += this.xSpeed + mouseX * 5;
             this.y += this.ySpeed + mouseY * 3;
-            // this.x += this.xSpeed;
-            // this.y += this.ySpeed;
             this.flip += this.flipSpeed;
             this.draw();
           }

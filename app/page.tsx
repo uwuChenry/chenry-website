@@ -173,9 +173,9 @@ export default function Home() {
                 <li>
                   Designed, built, and tested a 120-pound competition robot in six weeks, implementing control algorithms and computer vision localization using April Tags.
                 </li>
-                <li>
+                {/* <li>
                   Organized STEM outreach initiatives, including fairs for 7,000+ students and regional scrimmages, promoting education and engagement.
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

@@ -30,7 +30,7 @@ export default function Home() {
             
             <div className="space-y-8 text-gray-800 leading-relaxed">
               {/* Main Project Title */}
-              <div className="border border-gray-200 rounded-lg p-6">
+              <div className="border border-gray-200 rounded-lg p-6 bg-white bg-opacity-30 shadow-md">
                 <div 
                   className="cursor-pointer flex justify-between items-center"
                   onClick={() => setIsExpanded(!isExpanded)}

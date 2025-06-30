@@ -41,9 +41,7 @@ export default function Home() {
             </p>
             <div className="flex flex-row justify-between pt-5">
               <div>
-                <p className="font-semibold">
-                  Vex Robotics Team 980s
-                </p>
+                <a href="/projects" className="font-semibold hover:text-mygreen transition-colors duration-300">Vex Robotics Team 980s</a>
                 <p className="text-gray-600">
                   Captain, Robot Designer, Programmer
                 </p>
@@ -96,9 +94,7 @@ export default function Home() {
             </p>
             <div className="flex flex-row justify-between pt-5">
               <div>
-                <p className="font-semibold">
-                  Skywalker Robotics
-                </p>
+                <a href="https://skywalker.best" target="_blank" className="font-semibold hover:text-mygreen transition-colors duration-300">Skywalker Robotics</a>
                 <p className="text-gray-600">
                   Founder
                 </p>
@@ -132,23 +128,40 @@ export default function Home() {
             <div className="flex flex-row justify-between pt-5">
               <div>
                 <p className="font-semibold">
-                  Medical Robotics @ GT
+                  RoboRacing @ GT RoboJackets
                 </p>
                 <p className="text-gray-600">
                   Software Team
                 </p>
               </div>
               <div className="text-right">
-                <p>Aug 2024 - Present</p>
+                <p>Jan 2025 - Present</p>
               </div>
             </div>
             <div>
               <ul className="list-disc pl-5">
                 <li>
-                  Designing a prosthetic arm with integrated sensory feedback to optimize sensory restoration for arm amputees.
+                  Developed and tested autonomous navigation algorithms in a simulated F1TENTH environment using ROS2 in Docker on Linux. Implemented SLAM and a wall-following controller, visualized results in RViz, and began integrating RRT and pure pursuit for improved path planning and tracking.
                 </li>
+              </ul>
+            </div>
+            <div className="flex flex-row justify-between pt-5">
+              <div>
+                <p className="font-semibold">
+                  GT Medical Robotics
+                </p>
+                <p className="text-gray-600">
+                  Software Team
+                </p>
+              </div>
+              <div className="text-right">
+                <p>Aug 2024 - Jan 2025</p>
+              </div>
+            </div>
+            <div>
+              <ul className="list-disc pl-5">
                 <li>
-                  Leveraging Mediapipe for continuous hand gesture recognition and mapping gestures to EMG data using deep learning algorithms.
+                  Implemented a Mediapipe-based Python pipeline to extract hand landmarks and convert them into arrays of joint curvature values representing hand openness. Collaborated on mapping these gestures to EMG signals as a first step toward translating muscle activity into prosthetic hand motor commands.
                 </li>
               </ul>
             </div>
@@ -171,8 +184,11 @@ export default function Home() {
                   Led a 15-member software team, mentoring in embedded programming, and contributed to subsystem integration, drivetrain, and intake design, ensuring seamless control and programming alignment.
                 </li>
                 <li>
-                  Designed, built, and tested a 120-pound competition robot in six weeks, implementing control algorithms and computer vision localization using April Tags.
+                  Designed, built, and tested a 120-pound competition robot in six weeks, implementing inverse kinematics and gyroscope-based orientation control to enable omnidirectional movement and precise navigation in dynamic environments.
                 </li>
+                {/* <li>
+                  Designed, built, and tested a 120-pound competition robot in six weeks, implementing control algorithms and computer vision localization using April Tags.
+                </li> */}
                 {/* <li>
                   Organized STEM outreach initiatives, including fairs for 7,000+ students and regional scrimmages, promoting education and engagement.
                 </li> */}

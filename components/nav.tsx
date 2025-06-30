@@ -38,7 +38,7 @@ function Navbar() {
             <li className={`flex flex-row items-center ${pathname === '/resume' ? 'text-mygreen' : 'text-mygray'} hover:text-black`}
                 onMouseEnter={() => setHovered("resume")}
                 style={hovered === "resume" ? hoverStyle : undefined}>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                <a href="/PoChengChenResumev2.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     <p className="text-right pr-1">Resume</p>
                     <Image src="/resume.svg" alt="Download resume" width={20} height={20} style={{ filter: hovered === "resume" ? 'none' : 'grayscale(100%) brightness(0) invert(0.7)' }} />
                 </a>

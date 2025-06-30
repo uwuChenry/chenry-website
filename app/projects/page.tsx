@@ -54,7 +54,7 @@ export default function Home() {
                         Challenge and Initial Approach
                       </h3>
                       <p>
-                        In VEX robotics competitions, achieving precise and accurate robot movement was a persistent challenge. The standard method involved using PID controllers with sensors like wheel encoders to drive motors toward target values. However, this approach lacked smoothness due to its reactive nature, relying solely on sensor feedback without considering the robot's physical limits, leading to jerky motions.
+                        In VEX robotics competitions, achieving precise and accurate robot movement was a persistent challenge. The standard method involved using PID controllers with sensors like wheel encoders to drive motors toward target values. However, this approach lacked smoothness due to its reactive nature, relying solely on sensor feedback without considering the robot&apos;s physical limits, leading to jerky motions.
                       </p>
                     </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
                         Developing a Solution: Open-Loop Motion Profiles
                       </h3>
                       <p>
-                        To address these issues, I implemented open-loop motion profiles, which preplan robot movements based on physical constraints like maximum velocity and acceleration. This method generates smooth, repeatable trajectories that respect the robot's physical limits. The velocity curve resembled a trapezoid, optimizing speed and ensuring accuracy through controlled motion.
+                        To address these issues, I implemented open-loop motion profiles, which preplan robot movements based on physical constraints like maximum velocity and acceleration. This method generates smooth, repeatable trajectories that respect the robot&apos;s physical limits. The velocity curve resembled a trapezoid, optimizing speed and ensuring accuracy through controlled motion.
                       </p>
                     </div>
 
@@ -74,7 +74,7 @@ export default function Home() {
                         Enhancing Control with Custom Velocity Controllers
                       </h3>
                       <p>
-                        Accurate velocity tracking was crucial for following the motion profile. The built-in VEX PID controller proved inadequate, as it wasn't optimized for our robot. I designed a custom controller incorporating feedforward control based on target velocity and acceleration, alongside feedback mechanisms for self-correction. This significantly improved tracking accuracy, achieving smooth, precise movements.
+                        Accurate velocity tracking was crucial for following the motion profile. The built-in VEX PID controller proved inadequate, as it wasn&apos;t optimized for our robot. I designed a custom controller incorporating feedforward control based on target velocity and acceleration, alongside feedback mechanisms for self-correction. This significantly improved tracking accuracy, achieving smooth, precise movements.
                       </p>
                       
                       <Image src="/ffvspid.png" alt="Custom Velocity Controller" width={400} height={1000} className="mt-4 mx-auto" />
@@ -88,7 +88,7 @@ export default function Home() {
                         Refinement: Transition to S-Curve Motion Profiles
                       </h3>
                       <p>
-                        When translating the algorithm to C++ for the VEX robot, I noticed deviations from the desired velocity profile, particularly near top speeds. Research revealed that the torque of DC motors decreases as speed increases due to the relationship with back EMF. While reducing the maximum velocity improves the ability to track the target velocity, we are sacrificing maximum speed and can be disadvantageous when travelling longer distances. The solution was adopting an s-curve motion profile, which introduces jerk constraints (the derivative of acceleration). This adjustment smooths acceleration changes, better aligning with the motor's physical behavior. Hardware in the loop testing confirmed improved performance.
+                        When translating the algorithm to C++ for the VEX robot, I noticed deviations from the desired velocity profile, particularly near top speeds. Research revealed that the torque of DC motors decreases as speed increases due to the relationship with back EMF. While reducing the maximum velocity improves the ability to track the target velocity, we are sacrificing maximum speed and can be disadvantageous when travelling longer distances. The solution was adopting an s-curve motion profile, which introduces jerk constraints (the derivative of acceleration). This adjustment smooths acceleration changes, better aligning with the motor&apos;s physical behavior. Hardware in the loop testing confirmed improved performance.
                       </p>
                       <Image src="/scurve vel.png" alt="Custom Velocity Controller" width={400} height={1000} className="mt-4 mx-auto" />
                       <Image src="/scurve pos.png" alt="Custom Velocity Controller" width={400} height={1000} className="mt-4 mx-auto" />
